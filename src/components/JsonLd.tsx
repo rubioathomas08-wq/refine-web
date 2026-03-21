@@ -6,8 +6,8 @@ export default function JsonLd() {
     description:
       "Custom web design and development for small businesses in Murfreesboro, Tennessee. Refine Web.",
     url: "https://refinedweb.dev",
-    telephone: "+1-615-555-0000",
-    email: "hello@refinedweb.dev",
+    telephone: "+1-615-801-2070",
+    email: "rubio.athomas@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Murfreesboro",

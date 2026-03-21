@@ -153,9 +153,12 @@ export default function ContactContent() {
                     className="w-full rounded-lg border border-white/10 bg-dark-card px-4 py-3 text-sm text-off-white outline-none transition-colors focus:border-primary"
                   >
                     <option value="">Select an option</option>
-                    <option value="new-website">New Website</option>
-                    <option value="seo">SEO Help</option>
-                    <option value="maintenance">Monthly Maintenance</option>
+                    <option value="starter">Starter Website (1–3 pages)</option>
+                    <option value="standard">Standard Website (4–6 pages)</option>
+                    <option value="professional">Professional Website (7–12 pages)</option>
+                    <option value="premium">Premium Website (13–20+ pages)</option>
+                    <option value="maintenance">Monthly Retainer</option>
+                    <option value="hourly">Hourly Work / Add-ons</option>
                     <option value="browsing">Just Browsing</option>
                   </select>
                 </div>
@@ -216,11 +219,11 @@ export default function ContactContent() {
               <div className="mt-4 space-y-3 text-sm text-gray-text">
                 <p>
                   <span className="text-off-white">Email:</span>{" "}
-                  hello@refinedweb.dev
+                  rubio.athomas@gmail.com
                 </p>
                 <p>
                   <span className="text-off-white">Phone:</span>{" "}
-                  (615) 555-0000
+                  (615) 801-2070
                 </p>
                 <p>
                   <span className="text-off-white">Location:</span>{" "}
