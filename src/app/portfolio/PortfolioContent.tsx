@@ -6,6 +6,15 @@ import PortfolioCard from "@/components/PortfolioCard";
 
 const projects = [
   {
+    title: "Refine Mobile Detailing",
+    industry: "Auto Detailing",
+    description:
+      "Full website with online booking, service packages, add-ons menu, photo gallery, pricing page, and AI chatbot — built for a mobile detailing business in Murfreesboro, TN.",
+    color: "#0d9488",
+    image: "/portfolio/refine-detailing.png",
+    url: "https://www.refine-detailing.com",
+  },
+  {
     title: "Comfort Air HVAC",
     industry: "HVAC",
     description:
@@ -18,13 +27,6 @@ const projects = [
     description:
       "Complete restaurant website with interactive menu, hours & location, online reservation placeholder, and photo gallery.",
     color: "#5f1e1e",
-  },
-  {
-    title: "Pristine Auto Detail",
-    industry: "Auto Detailing",
-    description:
-      "Clean, conversion-focused site with online booking integration, service packages, and before/after gallery.",
-    color: "#1e5f3a",
   },
 ];
 
