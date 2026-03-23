@@ -14,20 +14,6 @@ const projects = [
     image: "/portfolio/refine-detailing.png",
     url: "https://www.refine-detailing.com",
   },
-  {
-    title: "Comfort Air HVAC",
-    industry: "HVAC",
-    description:
-      "Full 5-page website for a local Murfreesboro HVAC company. Includes service area pages, contact form, and Google Maps integration.",
-    color: "#1e3a5f",
-  },
-  {
-    title: "Magnolia Kitchen & Bar",
-    industry: "Restaurant",
-    description:
-      "Complete restaurant website with interactive menu, hours & location, online reservation placeholder, and photo gallery.",
-    color: "#5f1e1e",
-  },
 ];
 
 export default function PortfolioContent() {
@@ -56,7 +42,7 @@ export default function PortfolioContent() {
       </section>
 
       <SectionWrapper className="pt-8">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="max-w-lg">
           {projects.map((p, i) => (
             <PortfolioCard key={i} {...p} />
           ))}

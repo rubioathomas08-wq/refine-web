@@ -56,7 +56,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden">
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]" />
 
@@ -70,7 +70,7 @@ export default function HomePage() {
             <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium tracking-wide text-primary">
               Web Design in Murfreesboro, TN
             </span>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-6xl lg:text-7xl">
               We Build Websites That Work As Hard As{" "}
               <span className="text-primary">You Do</span>
             </h1>
@@ -113,47 +113,6 @@ export default function HomePage() {
                 {f.desc}
               </p>
             </motion.div>
-          ))}
-        </div>
-      </SectionWrapper>
-
-      {/* Social Proof */}
-      <SectionWrapper className="border-y border-white/5 bg-dark-light/50">
-        <div className="text-center">
-          <span className="text-sm font-medium uppercase tracking-widest text-primary">
-            Testimonials
-          </span>
-          <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">
-            What Our Clients Say
-          </h2>
-        </div>
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-white/10 bg-dark-card p-8"
-            >
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, s) => (
-                  <svg key={s} className="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="mt-4 text-sm italic leading-relaxed text-gray-text">
-                &ldquo;Testimonial placeholder — we&apos;ll add real client reviews
-                here once they&apos;re ready.&rdquo;
-              </p>
-              <div className="mt-6 flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-primary/20" />
-                <div>
-                  <p className="text-sm font-semibold text-off-white">
-                    Client Name
-                  </p>
-                  <p className="text-xs text-gray-text">Business Owner</p>
-                </div>
-              </div>
-            </div>
           ))}
         </div>
       </SectionWrapper>

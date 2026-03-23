@@ -197,20 +197,20 @@ export default function ContactContent() {
           <div className="space-y-8 lg:col-span-2">
             {/* Book a call */}
             <div className="rounded-2xl border border-white/10 bg-dark-card p-8">
-              <h3 className="font-display text-lg font-bold">Book a Zoom Call</h3>
+              <h3 className="font-display text-lg font-bold">Prefer to Talk?</h3>
               <p className="mt-3 text-sm text-gray-text">
-                Prefer a face-to-face conversation? Book a free 15-minute intro
-                call and we&apos;ll talk about your project.
+                Call or text us directly and we&apos;ll set up a time to walk
+                through your project. No forms, no waiting.
               </p>
               <a
-                href="#"
-                className="mt-5 inline-block rounded-lg border border-primary px-5 py-2.5 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white"
+                href="tel:+16158012070"
+                className="mt-5 inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-2.5 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white"
               >
-                Schedule a Call
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                (615) 801-2070
               </a>
-              <p className="mt-3 text-xs text-gray-text/60">
-                Calendly link coming soon
-              </p>
             </div>
 
             {/* Contact info */}

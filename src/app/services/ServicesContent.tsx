@@ -78,9 +78,9 @@ const retainerPlans = [
     audience: "1–3 page simple site",
     price: "$35",
     features: [
-      "Vercel hosting",
-      "Uptime monitoring",
-      "1 monthly SEO check",
+      "Fast, reliable hosting — we manage it",
+      "We monitor your site 24/7 so it stays online",
+      "Monthly Google ranking check",
     ],
   },
   {
@@ -89,8 +89,8 @@ const retainerPlans = [
     price: "$65",
     features: [
       "Everything in Micro",
-      "Google Business updates",
-      "Minor content edits",
+      "We keep your Google Business Profile updated",
+      "Small text or image changes included",
     ],
   },
   {
@@ -100,8 +100,8 @@ const retainerPlans = [
     highlighted: true,
     features: [
       "Everything in Standard",
-      "Monthly performance report",
-      "Faster response time",
+      "Monthly report on traffic & performance",
+      "Same-day response to requests",
     ],
   },
   {
@@ -110,8 +110,8 @@ const retainerPlans = [
     price: "$130",
     features: [
       "Everything in Pro",
-      "Database storage & backups",
-      "Priority support",
+      "Secure database storage & regular backups",
+      "You jump to the front of the line",
     ],
   },
   {
@@ -120,8 +120,8 @@ const retainerPlans = [
     price: "$175–$200",
     features: [
       "Everything in Advanced",
-      "API costs covered",
-      "Priority support",
+      "All AI & hosting costs covered",
+      "Top priority — fastest turnaround",
     ],
   },
 ];
@@ -370,16 +370,16 @@ export default function ServicesContent() {
             </thead>
             <tbody>
               {[
-                { feature: "Vercel hosting", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Uptime monitoring", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Monthly SEO check", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Fast, reliable hosting", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "24/7 uptime monitoring", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Monthly Google ranking check", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
                 { feature: "Google Business updates", micro: false, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Minor content edits", micro: false, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Monthly report", micro: false, standard: false, pro: true, advanced: true, enterprise: true },
-                { feature: "Faster response time", micro: false, standard: false, pro: true, advanced: true, enterprise: true },
+                { feature: "Small content changes", micro: false, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Monthly traffic report", micro: false, standard: false, pro: true, advanced: true, enterprise: true },
+                { feature: "Same-day response", micro: false, standard: false, pro: true, advanced: true, enterprise: true },
                 { feature: "Database & backups", micro: false, standard: false, pro: false, advanced: true, enterprise: true },
-                { feature: "API costs covered", micro: false, standard: false, pro: false, advanced: false, enterprise: true },
-                { feature: "Priority support", micro: false, standard: false, pro: false, advanced: true, enterprise: true },
+                { feature: "AI & hosting costs covered", micro: false, standard: false, pro: false, advanced: false, enterprise: true },
+                { feature: "Top priority support", micro: false, standard: false, pro: false, advanced: true, enterprise: true },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-white/5">
                   <td className="py-3.5 pr-4 text-gray-text">{row.feature}</td>
@@ -392,6 +392,55 @@ export default function ServicesContent() {
               ))}
             </tbody>
           </table>
+        </div>
+      </SectionWrapper>
+
+      {/* ── FAQ ── */}
+      <SectionWrapper>
+        <div className="text-center">
+          <span className="text-sm font-medium uppercase tracking-widest text-primary">
+            Common Questions
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">
+            FAQ
+          </h2>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl space-y-6">
+          {[
+            {
+              q: "How long does a website build take?",
+              a: "Most standard sites (4–6 pages) are live within 2–3 weeks. Starter sites can be done in under a week. Larger builds with custom features take 3–5 weeks depending on complexity.",
+            },
+            {
+              q: "What if I want to cancel my retainer?",
+              a: "Cancel anytime — no contracts, no cancellation fees. Your site stays live through the end of your billing period. If you don't pick a new hosting provider, the site goes offline after that. We'll always give you your files if you want to move somewhere else.",
+            },
+            {
+              q: "Do you work outside of Murfreesboro?",
+              a: "Absolutely. While most of our clients are in Murfreesboro and Middle Tennessee, everything we do is done remotely. We can build a site for any business, anywhere.",
+            },
+            {
+              q: "What does the free demo include?",
+              a: "We build a working version of your homepage and one or two key pages so you can see exactly what your site will look like. If you love it, we finish the build. If not, you walk away — no charge.",
+            },
+            {
+              q: "Do I own my website?",
+              a: "Yes. You own your domain, your content, and your brand. If you ever want to leave, we hand you everything — the code, the files, all of it. No hostage situations.",
+            },
+          ].map((faq, i) => (
+            <div
+              key={i}
+              className="rounded-xl border border-white/10 bg-dark-card px-6 py-5"
+            >
+              <h3 className="font-display text-base font-bold text-off-white">
+                {faq.q}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-text">
+                {faq.a}
+              </p>
+            </div>
+          ))}
         </div>
       </SectionWrapper>
 
