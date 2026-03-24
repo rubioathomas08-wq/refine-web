@@ -6,6 +6,15 @@ import PortfolioCard from "@/components/PortfolioCard";
 
 const projects = [
   {
+    title: "Outreach Wellness",
+    industry: "Health & Wellness",
+    description:
+      "Full website for a boutique wellness practice in Murfreesboro, TN — featuring IV therapy, weight loss programs, hormone replacement, and aesthetic services with online booking integration.",
+    color: "#b8860b",
+    image: "/portfolio/outreach-wellness.png",
+    url: "https://www.outreachwellness.com",
+  },
+  {
     title: "Refine Mobile Detailing",
     industry: "Auto Detailing",
     description:
@@ -42,7 +51,7 @@ export default function PortfolioContent() {
       </section>
 
       <SectionWrapper className="pt-8">
-        <div className="max-w-lg">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {projects.map((p, i) => (
             <PortfolioCard key={i} {...p} />
           ))}
