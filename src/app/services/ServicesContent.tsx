@@ -19,109 +19,130 @@ const X = () => (
 const buildTiers = [
   {
     name: "Starter",
-    pages: "1–3 pages",
-    price: "$400–$600",
+    pages: "Up to 5 pages",
+    price: "$500–$700",
     features: [
-      "Landing page",
-      "Contact form",
-      "Mobile responsive",
-      "Basic on-page SEO",
+      "Home, About, Services, Contact + 1 more",
+      "Mobile responsive design",
+      "Contact form with email delivery",
+      "Photo gallery (up to 10 images)",
+      "Google Maps embed",
+      "Social media links",
+      "On-page SEO + sitemap",
+      "Google Analytics & Search Console setup",
+      "2 rounds of revisions",
     ],
   },
   {
     name: "Standard",
-    pages: "4–6 pages",
-    price: "$700–$1,000",
+    pages: "Up to 8 pages",
+    price: "$900–$1,300",
     highlighted: true,
     features: [
       "Everything in Starter",
-      "About & Services pages",
-      "Gallery placeholder",
-      "Google Maps embed",
+      "Expanded gallery (up to 25 images)",
+      "Detailed services & pricing pages",
+      "Google Business Profile optimization",
+      "Local business structured data",
+      "Custom scroll animations",
+      "3 rounds of revisions",
     ],
   },
   {
     name: "Professional",
-    pages: "7–12 pages",
-    price: "$1,200–$1,800",
+    pages: "Up to 12 pages",
+    price: "$1,500–$2,200",
     features: [
       "Everything in Standard",
-      "Blog integration",
-      "Booking form",
-      "Custom animations",
+      "Booking system + admin dashboard",
+      "Email collection with export",
+      "Blog-ready setup",
+      "Expanded gallery (up to 50 images)",
+      "Automated analytics reports",
+      "4 rounds of revisions",
     ],
   },
   {
     name: "Premium",
     pages: "13–20+ pages",
-    price: "$2,000–$3,500+",
+    price: "$2,500–$4,000+",
     features: [
-      "Full custom build",
-      "Multiple sections",
-      "Advanced features",
-      "Complex integrations",
+      "Everything in Professional",
+      "AI chatbot integration",
+      "Photo/video gallery with uploads",
+      "Advanced forms (intake, quotes, multi-step)",
+      "Priority build (1–2 weeks)",
+      "Unlimited revisions during build",
     ],
   },
 ];
 
 const addOns = [
-  { name: "AI Chatbot Integration", price: "$300–$500" },
-  { name: "Photo/Video Gallery with Uploads", price: "$200–$400" },
-  { name: "E-Commerce (Online Store)", price: "$500–$1,000" },
-  { name: "Booking/Scheduling System", price: "$150–$300" },
+  { name: "AI Chatbot (answers FAQs, captures leads)", price: "$400–$600" },
+  { name: "Booking/Scheduling System + Admin Panel", price: "$300–$500" },
+  { name: "Photo Gallery with Client Uploads", price: "$250–$400" },
+  { name: "Email Collection + Admin Export", price: "$150–$250" },
   { name: "Custom Logo Design", price: "$100–$200" },
+  { name: "Additional Pages (beyond tier)", price: "$75–$150/page" },
+  { name: "Rush Delivery (under 1 week)", price: "$300–$500" },
+  { name: "Google Business Profile Setup", price: "$100" },
 ];
 
 const retainerPlans = [
   {
-    name: "Micro",
-    audience: "1–3 page simple site",
-    price: "$35",
+    name: "Starter",
+    audience: "Simple site (1–5 pages)",
+    price: "$45",
     features: [
-      "Fast, reliable hosting — we manage it",
-      "We monitor your site 24/7 so it stays online",
+      "Hosting, SSL, uptime monitoring",
+      "Google Analytics & Search Console access",
       "Monthly Google ranking check",
+      "Minor text edits (up to 30 min/month)",
     ],
   },
   {
     name: "Standard",
-    audience: "4–6 page site",
-    price: "$65",
+    audience: "Mid site (6–8 pages)",
+    price: "$75",
     features: [
-      "Everything in Micro",
-      "We keep your Google Business Profile updated",
-      "Small text or image changes included",
+      "Everything in Starter",
+      "Google Business Profile updates",
+      "Monthly analytics snapshot sent to you",
+      "Content edits (up to 1 hr/month)",
     ],
   },
   {
     name: "Pro",
-    audience: "7–12 page site",
-    price: "$90",
+    audience: "Larger site (9–12 pages)",
+    price: "$110",
     highlighted: true,
     features: [
       "Everything in Standard",
-      "Monthly report on traffic & performance",
-      "Same-day response to requests",
+      "Monthly performance & traffic report",
+      "24hr response time guaranteed",
+      "Content edits (up to 2 hrs/month)",
     ],
   },
   {
     name: "Advanced",
-    audience: "Large site with database",
-    price: "$130",
+    audience: "Site with database features",
+    price: "$150",
     features: [
       "Everything in Pro",
-      "Secure database storage & regular backups",
-      "You jump to the front of the line",
+      "Database management & backups",
+      "Storage monitoring",
+      "Content edits (up to 3 hrs/month)",
     ],
   },
   {
     name: "Enterprise",
-    audience: "AI chatbot + gallery + video",
-    price: "$175–$200",
+    audience: "AI chatbot + advanced features",
+    price: "$200",
     features: [
       "Everything in Advanced",
-      "All AI & hosting costs covered",
-      "Top priority — fastest turnaround",
+      "All AI & API costs covered",
+      "Priority same-day support",
+      "Content edits (up to 4 hrs/month)",
     ],
   },
 ];
@@ -129,7 +150,7 @@ const retainerPlans = [
 const hourlyRates = [
   { situation: "Client has active retainer", rate: "$50/hr" },
   { situation: "Client has no retainer", rate: "$100/hr" },
-  { situation: "Emergency / same-day work", rate: "$125/hr" },
+  { situation: "Emergency / same-day work", rate: "$150/hr" },
 ];
 
 export default function ServicesContent() {
@@ -173,7 +194,7 @@ export default function ServicesContent() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {buildTiers.map((tier, i) => (
             <motion.div
               key={i}
@@ -233,7 +254,7 @@ export default function ServicesContent() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
           {addOns.map((addon, i) => (
             <div
               key={i}
@@ -261,11 +282,13 @@ export default function ServicesContent() {
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-gray-text">
             Hosting, SEO, monitoring, and updates — all handled for you.
-            Cancel anytime. No contracts.
+            Cancel anytime. No contracts. Every plan includes hosting on a
+            fast, reliable platform with 99.9% uptime, SSL certificate, and
+            Google Analytics & Search Console access.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {retainerPlans.map((plan, i) => (
             <motion.div
               key={i}
@@ -310,6 +333,16 @@ export default function ServicesContent() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* No retainer note */}
+        <div className="mt-10 rounded-xl border border-white/10 bg-dark-card px-6 py-5 text-center">
+          <p className="text-sm text-gray-text">
+            <span className="font-semibold text-off-white">Don&apos;t want a retainer?</span>{" "}
+            Your static site stays live for free. But features that require a database
+            (booking systems, admin panels, chatbots, upload galleries) will be
+            deactivated after 30 days without a plan. Any edits are billed at $100/hr.
+          </p>
         </div>
       </SectionWrapper>
 
@@ -361,29 +394,30 @@ export default function ServicesContent() {
             <thead>
               <tr className="border-b border-white/10">
                 <th className="py-4 pr-4 font-display text-off-white">Feature</th>
-                <th className="py-4 px-3 text-center font-display text-gray-text">Micro<br /><span className="text-xs font-normal">$35/mo</span></th>
-                <th className="py-4 px-3 text-center font-display text-gray-text">Standard<br /><span className="text-xs font-normal">$65/mo</span></th>
-                <th className="py-4 px-3 text-center font-display text-primary">Pro<br /><span className="text-xs font-normal">$90/mo</span></th>
-                <th className="py-4 px-3 text-center font-display text-gray-text">Advanced<br /><span className="text-xs font-normal">$130/mo</span></th>
-                <th className="py-4 pl-3 text-center font-display text-gray-text">Enterprise<br /><span className="text-xs font-normal">$175+/mo</span></th>
+                <th className="py-4 px-3 text-center font-display text-gray-text">Starter<br /><span className="text-xs font-normal">$45/mo</span></th>
+                <th className="py-4 px-3 text-center font-display text-gray-text">Standard<br /><span className="text-xs font-normal">$75/mo</span></th>
+                <th className="py-4 px-3 text-center font-display text-primary">Pro<br /><span className="text-xs font-normal">$110/mo</span></th>
+                <th className="py-4 px-3 text-center font-display text-gray-text">Advanced<br /><span className="text-xs font-normal">$150/mo</span></th>
+                <th className="py-4 pl-3 text-center font-display text-gray-text">Enterprise<br /><span className="text-xs font-normal">$200/mo</span></th>
               </tr>
             </thead>
             <tbody>
               {[
-                { feature: "Fast, reliable hosting", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "24/7 uptime monitoring", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Monthly Google ranking check", micro: true, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Google Business updates", micro: false, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Small content changes", micro: false, standard: true, pro: true, advanced: true, enterprise: true },
-                { feature: "Monthly traffic report", micro: false, standard: false, pro: true, advanced: true, enterprise: true },
-                { feature: "Same-day response", micro: false, standard: false, pro: true, advanced: true, enterprise: true },
-                { feature: "Database & backups", micro: false, standard: false, pro: false, advanced: true, enterprise: true },
-                { feature: "AI & hosting costs covered", micro: false, standard: false, pro: false, advanced: false, enterprise: true },
-                { feature: "Top priority support", micro: false, standard: false, pro: false, advanced: true, enterprise: true },
+                { feature: "Hosting, SSL & uptime monitoring", starter: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Google Analytics & Search Console access", starter: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Monthly Google ranking check", starter: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Google Business Profile updates", starter: false, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Monthly analytics snapshot", starter: false, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Content edits included", starter: true, standard: true, pro: true, advanced: true, enterprise: true },
+                { feature: "Monthly performance report", starter: false, standard: false, pro: true, advanced: true, enterprise: true },
+                { feature: "24hr response time", starter: false, standard: false, pro: true, advanced: true, enterprise: true },
+                { feature: "Database management & backups", starter: false, standard: false, pro: false, advanced: true, enterprise: true },
+                { feature: "AI & API costs covered", starter: false, standard: false, pro: false, advanced: false, enterprise: true },
+                { feature: "Same-day priority support", starter: false, standard: false, pro: false, advanced: false, enterprise: true },
               ].map((row, i) => (
                 <tr key={i} className="border-b border-white/5">
                   <td className="py-3.5 pr-4 text-gray-text">{row.feature}</td>
-                  <td className="py-3.5 px-3 text-center">{row.micro ? <Check /> : <X />}</td>
+                  <td className="py-3.5 px-3 text-center">{row.starter ? <Check /> : <X />}</td>
                   <td className="py-3.5 px-3 text-center">{row.standard ? <Check /> : <X />}</td>
                   <td className="py-3.5 px-3 text-center">{row.pro ? <Check /> : <X />}</td>
                   <td className="py-3.5 px-3 text-center">{row.advanced ? <Check /> : <X />}</td>
@@ -410,11 +444,15 @@ export default function ServicesContent() {
           {[
             {
               q: "How long does a website build take?",
-              a: "Most standard sites (4–6 pages) are live within 2–3 weeks. Starter sites can be done in under a week. Larger builds with custom features take 3–5 weeks depending on complexity.",
+              a: "Most standard sites (5–8 pages) are live within 2–3 weeks. Starter sites can be done in under a week. Larger builds with custom features like booking systems or chatbots take 3–5 weeks depending on complexity.",
             },
             {
               q: "What if I want to cancel my retainer?",
-              a: "Cancel anytime — no contracts, no cancellation fees. Your site stays live through the end of your billing period. If you don't pick a new hosting provider, the site goes offline after that. We'll always give you your files if you want to move somewhere else.",
+              a: "Cancel anytime — no contracts, no cancellation fees. Your static site stays live. However, features that require a database (booking systems, admin panels, chatbots, upload galleries) will be deactivated after 30 days without a plan. We'll always give you your files if you want to move somewhere else.",
+            },
+            {
+              q: "What happens if I don't get a retainer?",
+              a: "Your basic website stays live for free on our hosting. But any database-powered features (booking, chatbot, gallery uploads, admin panel) get shut off after 30 days. Any future edits or changes are billed at $100/hr instead of $50/hr. No retainer also means no SEO monitoring, no Google Business updates, and no priority support.",
             },
             {
               q: "Do you work outside of Murfreesboro?",
@@ -427,6 +465,10 @@ export default function ServicesContent() {
             {
               q: "Do I own my website?",
               a: "Yes. You own your domain, your content, and your brand. If you ever want to leave, we hand you everything — the code, the files, all of it. No hostage situations.",
+            },
+            {
+              q: "Can I see my website's analytics?",
+              a: "Yes. Every client gets viewer access to Google Analytics and Google Search Console so you can see exactly how your site is performing — traffic, clicks, search rankings, all of it. We set it up, you get a login.",
             },
           ].map((faq, i) => (
             <div

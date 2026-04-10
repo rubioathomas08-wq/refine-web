@@ -153,9 +153,9 @@ export default function ContactContent() {
                     className="w-full rounded-lg border border-white/10 bg-dark-card px-4 py-3 text-sm text-off-white outline-none transition-colors focus:border-primary"
                   >
                     <option value="">Select an option</option>
-                    <option value="starter">Starter Website (1–3 pages)</option>
-                    <option value="standard">Standard Website (4–6 pages)</option>
-                    <option value="professional">Professional Website (7–12 pages)</option>
+                    <option value="starter">Starter Website (up to 5 pages)</option>
+                    <option value="standard">Standard Website (up to 8 pages)</option>
+                    <option value="professional">Professional Website (up to 12 pages)</option>
                     <option value="premium">Premium Website (13–20+ pages)</option>
                     <option value="maintenance">Monthly Retainer</option>
                     <option value="hourly">Hourly Work / Add-ons</option>
