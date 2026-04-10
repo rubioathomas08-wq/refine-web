@@ -2,7 +2,10 @@
 
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import CompareTool from "@/components/CompareTool";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { buildTiers, addOns, retainerPlans, hourlyRates } from "@/data/services";
 
 const Check = () => (
   <svg className="mx-auto h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -15,143 +18,6 @@ const X = () => (
     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
   </svg>
 );
-
-const buildTiers = [
-  {
-    name: "Starter",
-    pages: "Up to 5 pages",
-    price: "$500–$700",
-    features: [
-      "Home, About, Services, Contact + 1 more",
-      "Mobile responsive design",
-      "Contact form with email delivery",
-      "Photo gallery (up to 10 images)",
-      "Google Maps embed",
-      "Social media links",
-      "On-page SEO + sitemap",
-      "Google Analytics & Search Console setup",
-      "2 rounds of revisions",
-    ],
-  },
-  {
-    name: "Standard",
-    pages: "Up to 8 pages",
-    price: "$900–$1,300",
-    highlighted: true,
-    features: [
-      "Everything in Starter",
-      "Expanded gallery (up to 25 images)",
-      "Detailed services & pricing pages",
-      "Google Business Profile optimization",
-      "Local business structured data",
-      "Custom scroll animations",
-      "3 rounds of revisions",
-    ],
-  },
-  {
-    name: "Professional",
-    pages: "Up to 12 pages",
-    price: "$1,500–$2,200",
-    features: [
-      "Everything in Standard",
-      "Booking system + admin dashboard",
-      "Email collection with export",
-      "Blog-ready setup",
-      "Expanded gallery (up to 50 images)",
-      "Automated analytics reports",
-      "4 rounds of revisions",
-    ],
-  },
-  {
-    name: "Premium",
-    pages: "13–20+ pages",
-    price: "$2,500–$4,000+",
-    features: [
-      "Everything in Professional",
-      "AI chatbot integration",
-      "Photo/video gallery with uploads",
-      "Advanced forms (intake, quotes, multi-step)",
-      "Priority build (1–2 weeks)",
-      "Unlimited revisions during build",
-    ],
-  },
-];
-
-const addOns = [
-  { name: "AI Chatbot (answers FAQs, captures leads)", price: "$400–$600" },
-  { name: "Booking/Scheduling System + Admin Panel", price: "$300–$500" },
-  { name: "Photo Gallery with Client Uploads", price: "$250–$400" },
-  { name: "Email Collection + Admin Export", price: "$150–$250" },
-  { name: "Custom Logo Design", price: "$100–$200" },
-  { name: "Additional Pages (beyond tier)", price: "$75–$150/page" },
-  { name: "Rush Delivery (under 1 week)", price: "$300–$500" },
-  { name: "Google Business Profile Setup", price: "$100" },
-];
-
-const retainerPlans = [
-  {
-    name: "Starter",
-    audience: "Simple site (1–5 pages)",
-    price: "$45",
-    features: [
-      "Hosting, SSL, uptime monitoring",
-      "Google Analytics & Search Console access",
-      "Monthly Google ranking check",
-      "Minor text edits (up to 30 min/month)",
-    ],
-  },
-  {
-    name: "Standard",
-    audience: "Mid site (6–8 pages)",
-    price: "$75",
-    features: [
-      "Everything in Starter",
-      "Google Business Profile updates",
-      "Monthly analytics snapshot sent to you",
-      "Content edits (up to 1 hr/month)",
-    ],
-  },
-  {
-    name: "Pro",
-    audience: "Larger site (9–12 pages)",
-    price: "$110",
-    highlighted: true,
-    features: [
-      "Everything in Standard",
-      "Monthly performance & traffic report",
-      "24hr response time guaranteed",
-      "Content edits (up to 2 hrs/month)",
-    ],
-  },
-  {
-    name: "Advanced",
-    audience: "Site with database features",
-    price: "$150",
-    features: [
-      "Everything in Pro",
-      "Database management & backups",
-      "Storage monitoring",
-      "Content edits (up to 3 hrs/month)",
-    ],
-  },
-  {
-    name: "Enterprise",
-    audience: "AI chatbot + advanced features",
-    price: "$200",
-    features: [
-      "Everything in Advanced",
-      "All AI & API costs covered",
-      "Priority same-day support",
-      "Content edits (up to 4 hrs/month)",
-    ],
-  },
-];
-
-const hourlyRates = [
-  { situation: "Client has active retainer", rate: "$50/hr" },
-  { situation: "Client has no retainer", rate: "$100/hr" },
-  { situation: "Emergency / same-day work", rate: "$150/hr" },
-];
 
 export default function ServicesContent() {
   return (
@@ -225,7 +91,7 @@ export default function ServicesContent() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6">
+              <div className="mt-6 space-y-3">
                 <Button
                   href="/contact"
                   variant={tier.highlighted ? "primary" : "secondary"}
@@ -233,9 +99,35 @@ export default function ServicesContent() {
                 >
                   Get a Quote
                 </Button>
+                <Link
+                  href={`/services/${tier.slug}`}
+                  className="block text-center text-sm font-medium text-gray-text transition-colors hover:text-primary"
+                >
+                  View Full Details &rarr;
+                </Link>
               </div>
             </motion.div>
           ))}
+        </div>
+      </SectionWrapper>
+
+      {/* ── COMPARE TIERS ── */}
+      <SectionWrapper>
+        <div className="text-center">
+          <span className="text-sm font-medium uppercase tracking-widest text-primary">
+            Compare
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">
+            Compare Build Tiers
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-gray-text">
+            Not sure which tier is right for you? Pick two and see exactly
+            what&apos;s included side by side.
+          </p>
+        </div>
+
+        <div className="mt-12">
+          <CompareTool />
         </div>
       </SectionWrapper>
 
@@ -254,19 +146,25 @@ export default function ServicesContent() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {addOns.map((addon, i) => (
-            <div
+            <Link
               key={i}
-              className="flex items-center justify-between rounded-xl border border-white/10 bg-dark-card px-6 py-5"
+              href={`/services/${addon.slug}`}
+              className="group flex items-center justify-between rounded-xl border border-white/10 bg-dark-card px-6 py-5 transition-all hover:border-primary/30"
             >
-              <span className="text-sm font-medium text-off-white">
+              <span className="text-sm font-medium text-off-white group-hover:text-primary transition-colors">
                 {addon.name}
               </span>
-              <span className="ml-4 shrink-0 text-sm font-semibold text-primary">
-                {addon.price}
-              </span>
-            </div>
+              <div className="ml-4 flex shrink-0 items-center gap-3">
+                <span className="text-sm font-semibold text-primary">
+                  {addon.price}
+                </span>
+                <span className="text-xs text-gray-text/60 group-hover:text-primary transition-colors">
+                  Details &rarr;
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
       </SectionWrapper>
@@ -378,7 +276,7 @@ export default function ServicesContent() {
         </div>
       </SectionWrapper>
 
-      {/* ── COMPARISON TABLE ── */}
+      {/* ── RETAINER COMPARISON TABLE ── */}
       <SectionWrapper>
         <div className="text-center">
           <span className="text-sm font-medium uppercase tracking-widest text-primary">
