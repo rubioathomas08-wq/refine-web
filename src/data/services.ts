@@ -64,7 +64,7 @@ export const buildTiers: BuildTier[] = [
       "Social media links",
       "On-page SEO + sitemap",
       "Google Analytics & Search Console setup",
-      "2 rounds of revisions",
+      "3 rounds of revisions",
     ],
     description:
       "The Starter package is built for businesses that need a clean, professional web presence without the complexity. You get up to 5 fully custom pages — no templates, no drag-and-drop builders. Every page is hand-built, mobile responsive, and optimized for local search so your business shows up when people Google you. We include a working contact form that emails you directly when someone reaches out, a photo gallery to showcase your work, and a Google Maps embed so customers can find you. You also get Google Analytics and Search Console set up from day one so you can see exactly how your site is performing.",
@@ -98,7 +98,7 @@ export const buildTiers: BuildTier[] = [
       },
     ],
     deliveryTime: "5–7 business days",
-    revisions: "2 rounds of revisions included",
+    revisions: "3 rounds of revisions included",
   },
   {
     type: "tier",
